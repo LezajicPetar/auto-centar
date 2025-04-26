@@ -1,0 +1,71 @@
+nav {
+  background-color: #dde0e9;
+  height: 6%;
+  align-content: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  padding: 0px 350px 0px 350px;
+  margin: 10px;
+}
+nav ul a {
+  color: #003153;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav ul a:hover {
+  color: #b96d34;
+}
+nav ul .nav-more {
+  display: none;
+}
+nav ul img {
+  width: 60px;
+  height: 30px;
+}
+
+.sellers {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  justify-content: center;
+  padding: 30px 30px 10px 30px;
+  background-image: url("https://skolovanje.b-cdn.net/osnove%20veb%20programiranja/2.%20HTML%20layout%2C%20SASS/2.3%20Sass/road_without_car.jpeg");
+}
+.sellers h1 {
+  color: #003153;
+  font-size: 1em;
+}
+.sellers .locations {
+  display: flex;
+  justify-content: space-around;
+}
+.sellers .locations div {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 240px;
+  height: 90px;
+  border-radius: 15px;
+  padding: 0px 10px 30px 10px;
+}
+.sellers .locations div h2 {
+  text-align: center;
+  color: #003153;
+}
+.sellers .locations div p {
+  color: #003153;
+}
+.sellers .locations div p span {
+  color: #b96d34;
+}
+
+body {
+  height: 100vh;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+nav {
+    background-color: $primary-color;
+    height: 6%;
+    align-content: center;
+    
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        list-style: none;
+        padding: 0px 350px 0px 350px;
+        margin: 10px;
+
+        a{
+            color: $secondary-color;
+            font-weight: bold;
+            text-decoration: none;
+            
+            &:hover{
+                color: $tertiary-color;
+            }
+        }
+        
+        .nav-more{
+            display:none;
+        }
+
+        img{
+            width: 60px;
+            height: 30px;
+        }
+    }
+}

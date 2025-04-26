@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+.sellers{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: center;
+    padding: 30px 30px 10px 30px;
+    background-image: url("https://skolovanje.b-cdn.net/osnove%20veb%20programiranja/2.%20HTML%20layout%2C%20SASS/2.3%20Sass/road_without_car.jpeg");
+
+    h1{
+        color:$secondary-color;
+        font-size: 1em;
+    }
+    .locations{
+        display: flex;
+        justify-content: space-around;
+        
+        div{
+            background-color: $prodajne-lokacije-boja;
+            width: 240px;
+            height: 90px;
+            border-radius: 15px;
+            padding: 0px 10px 30px 10px;
+            
+        h2{
+            text-align: center;
+            color: $secondary-color;
+        }
+
+        p{
+            color: $secondary-color;
+
+            span{
+                color: $tertiary-color;
+            }
+            }
+        }
+    }
+}
