@@ -1,16 +1,14 @@
 nav {
   background-color: #dde0e9;
-  height: 6%;
-  align-content: center;
+  height: 6vh;
 }
 nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
   list-style: none;
-  padding: 0px 350px 0px 350px;
-  margin: 10px;
+  padding: 5px 350px 5px 350px;
+  margin: 0px;
 }
 nav ul a {
   color: #003153;
@@ -28,17 +26,20 @@ nav ul img {
   height: 30px;
 }
 
+.background {
+  background-image: url("https://skolovanje.b-cdn.net/osnove%20veb%20programiranja/2.%20HTML%20layout%2C%20SASS/2.3%20Sass/road_without_car.jpeg");
+  background-size: 100% 800px;
+}
+
 .sellers {
   display: flex;
   flex-direction: column;
   height: 40vh;
   justify-content: center;
   padding: 30px 30px 10px 30px;
-  background-image: url("https://skolovanje.b-cdn.net/osnove%20veb%20programiranja/2.%20HTML%20layout%2C%20SASS/2.3%20Sass/road_without_car.jpeg");
 }
 .sellers h1 {
   color: #003153;
-  font-size: 1em;
 }
 .sellers .locations {
   display: flex;
@@ -46,10 +47,15 @@ nav ul img {
 }
 .sellers .locations div {
   background-color: rgba(255, 255, 255, 0.7);
-  width: 240px;
-  height: 90px;
   border-radius: 15px;
-  padding: 0px 10px 30px 10px;
+  padding: 0px 10px;
+  font-weight: bold;
+  flex: 1;
+  max-width: 250px;
+  border: 1px solid transparent;
+}
+.sellers .locations div:hover {
+  border: 1px solid #003153;
 }
 .sellers .locations div h2 {
   text-align: center;
@@ -63,9 +69,152 @@ nav ul img {
 }
 
 body {
-  height: 100vh;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.cars {
+  display: flex;
+  height: 87vh;
+}
+.cars form {
+  width: 60%;
+  margin: 35px 0px 20px 15px;
+  padding: 20px;
+  background-color: #dde0e9;
+  border-radius: 15px;
+  border: 1px solid #003153;
+  color: #003153;
+}
+.cars form .dream-car {
+  display: flex;
+  height: 35vh;
+}
+.cars form .dream-car img {
+  width: 75%;
+  height: 40vh;
+}
+.cars form .dream-car .description {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  width: 30%;
+  flex: 1;
+}
+.cars form .dream-car .description h4,
+.cars form .dream-car .description p {
+  flex: 1;
+  font-size: 27px;
+  margin: 0px;
+  align-content: center;
+}
+.cars form .calculator {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  height: 38vh;
+  border-radius: 15px;
+  font-weight: bold;
+  justify-content: space-between;
+  gap: 20px;
+}
+.cars form .calculator div {
+  height: 7vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.cars form .calculator div:nth-child(5) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cars form .calculator div:nth-child(5) label {
+  width: 100%;
+}
+.cars form .calculator div:nth-child(5) span {
+  width: 17%;
+}
+.cars form .calculator div:nth-child(5) #price {
+  padding: 0px;
+  width: 40%;
+  margin-right: 10px;
+}
+.cars form .calculator div.car-color {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 8px;
+}
+.cars form .calculator div.car-color label:first-child {
+  width: 100%;
+}
+.cars form .calculator div.car-color label,
+.cars form .calculator div.car-color input {
+  width: 40%;
+  margin: 0px;
+  height: 2vh;
+}
+.cars form .calculator div label {
+  margin-bottom: 5px;
+}
+.cars form .calculator div select {
+  padding: 0px 10px;
+  height: 25px;
+  border-radius: 15px;
+  border: 1px solid #003153;
+  font-weight: bold;
+}
+.cars form .calculator div input {
+  padding: 0px 10px;
+  height: 25px;
+  border-radius: 15px;
+  border: 1px solid #003153;
+  font-weight: bold;
+}
+.cars form .calculator div input[type=color] {
+  width: 100%;
+}
+.cars .offers {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  justify-content: space-around;
+  margin: 35px 20px 20px 20px;
+}
+.cars .offers div {
+  background-color: #dde0e9;
+  border-radius: 15px;
+  border: 1px solid #003153;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+  flex: 1;
+  max-width: 45%;
+}
+.cars .offers div:nth-child(3) {
+  max-width: 60vh;
+  margin: 10px 0px;
+}
+.cars .offers div:nth-child(3) img {
+  width: 400px;
+  height: 180px;
+  margin-top: 0px;
+}
+.cars .offers div img {
+  height: 120px;
+  width: 200px;
+}
+.cars .offers div p {
+  margin: 0px;
+  text-align: center;
+  color: #003153;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */
