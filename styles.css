@@ -68,6 +68,25 @@ nav ul img {
   color: #b96d34;
 }
 
+footer {
+  background-color: #003153;
+  height: 6vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer a {
+  width: 12%;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+}
+footer a:nth-child(5) {
+  margin-left: 350px;
+}
+
 body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
