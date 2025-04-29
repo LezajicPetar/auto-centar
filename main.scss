@@ -2,167 +2,173 @@
 @use 'header';
 @use 'prodajne_lokacije';
 @use 'footer';
+@use 'mixins' as *;
 
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
-}
 
-// Slika velikog automobila + h i p pored
-.cars {
-    display: flex;
-    height: 87vh;
-
-    form {
-        width: 60%;
-        margin: 35px 0px 20px 15px;
-        padding: 20px;
-        background-color: $primary-color;
-        border-radius: 15px;
-        border: 1px solid $secondary-color;
-        color: $secondary-color;
-
-        .dream-car {
-            display: flex;
-            height: 35vh;
-
-            img {
-                width: 75%;
-                height: 40vh;
-            }
-
-            .description {
-                display: flex;
-                flex-direction: column;
-                font-weight: bold;
-                text-align: center;
-                width: 30%;
-                flex: 1;
-
-                h4,
-                p {
-                    flex: 1;
-                    font-size: 27px;
-                    margin: 0px;
-                    align-content: center;
-                }
-            }
-        }
-
-// Kalkulator cene 
-        .calculator {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 30px;
-            height: 38vh;
-            border-radius: 15px;
-            font-weight: bold;
-            justify-content: space-between;
-            gap: 20px;
-
-            div {
-                height: 7vh;
-                width: 40%;
-                display: flex;
-                flex-direction: column;
-
-                &:nth-child(5) {
-                    @include flex-row-wrap-;
-                    align-items: center;
-
-                    label {
-                            width: 100%;
-                    }
-
-                    span {
-                        width: 17%;
-                    }
-
-                    #price {
-                        padding: 0px;
-                        width: 40%;
-                        margin-right: 10px;
-                    }
-                }
-
-                &.car-color {
-                    @include flex-row-wrap-;
-                    align-content: center;
-                    gap: 8px;
-
-                    label:first-child {
-                        width: 100%;
-                    }
-
-                    label,
-                    input {
-                        width: 40%;
-                        margin: 0px;
-                        height: 2vh;
-                    }
-                }
-
-                label {
-                    margin-bottom: 5px;
-                }
-
-                select {
-                    @include vezbamo-mixin;
-                }
-
-                input {
-                    @include vezbamo-mixin;
-
-                    &[type="color"] {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
-// Ponude sa desne strane
-    .offers {
+    // Slika velikog automobila + h i p pored
+    .cars {
         display: flex;
-        flex-wrap: wrap;
-        width: 40%;
-        justify-content: space-around;
-        margin: 35px 20px 20px 20px;
+        height: 87vh;
 
-        div {
+        form {
+            width: 60%;
+            margin: 35px 0px 20px 15px;
+            padding: 20px;
             background-color: $primary-color;
             border-radius: 15px;
             border: 1px solid $secondary-color;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0px 20px;
-            flex: 1;
-            max-width: 45%;
+            color: $secondary-color;
 
-            &:nth-child(3) {
-                max-width: 60vh;
-                margin: 10px 0px;
+            .dream-car {
+                display: flex;
+                height: 35vh;
+                align-items: center;
+
+                img {
+                    width: 75%;
+                    height: 40vh;
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: bold;
+                    text-align: center;
+                    width: 30%;
+                    flex: 1;
+
+                    h4,
+                    p {
+                        flex: 1;
+                        font-size: 27px;
+                        margin: 0px;
+                        align-content: center;
+                        margin: 15px 0px;
+                    }
+                }
             }
 
-            &:nth-child(3) img {
-                width: 400px;
-                height: 180px;
-                margin-top: 0px;
-            }
-
-            img {
-                height: 120px;
-                width: 200px;
-            }
-
-            p {
-                margin: 0px;
-                text-align: center;
-                color: $secondary-color;
+            // Kalkulator cene 
+            .calculator {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: 38vh;
+                border-radius: 15px;
                 font-weight: bold;
+                justify-content: space-between;
+                gap: 20px;
+
+                div {
+                    height: 7vh;
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+
+                    &:nth-child(5) {
+                        @include flex-row-wrap-;
+                        align-items: center;
+
+                        label {
+                            width: 100%;
+                        }
+
+                        span {
+                            width: 18%;
+                        }
+
+                        #price {
+                            padding: 0px;
+                            width: 40%;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &.car-color {
+                        @include flex-row-wrap-;
+                        align-content: center;
+                        gap: 8px;
+
+                        label:first-child {
+                            width: 100%;
+                        }
+
+                        label,
+                        input {
+                            width: 40%;
+                            margin: 0px;
+                            height: 2vh;
+                        }
+                    }
+
+                    label {
+                        margin-bottom: 5px;
+                    }
+
+                    select {
+                        @include vezbamo-mixin;
+                    }
+
+                    input {
+                        @include vezbamo-mixin;
+
+                        &[type="color"] {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Ponude sa desne strane
+        .offers {
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+            justify-content: space-around;
+            margin: 35px 20px 20px 20px;
+
+            div {
+                background-color: $primary-color;
+                border-radius: 15px;
+                border: 1px solid $secondary-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0px 20px;
+                flex: 1;
+                max-width: 45%;
+
+                &:nth-child(3) {
+                    max-width: 60vh;
+                    margin: 10px 0px;
+                }
+
+                &:nth-child(3) img {
+                    width: 400px;
+                    height: 180px;
+                    margin-top: 0px;
+                }
+
+                img {
+                    height: 120px;
+                    width: 200px;
+                }
+
+                p {
+                    margin: 0px;
+                    text-align: center;
+                    color: $secondary-color;
+                    font-weight: bold;
+                }
             }
         }
     }
 }
+
+@include responsive($medium-screen, $small-screen);
+

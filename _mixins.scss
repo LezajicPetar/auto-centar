@@ -1,0 +1,255 @@
+@use 'variables' as *;
+
+@mixin responsive($medium-screen-size, $small-screen-size) {
+    @media screen and (max-width: $medium-screen-size) {
+
+        header {
+            ul {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 200px;
+
+                .nav-more {
+                    display: flex;
+                }
+
+                .nav-hide {
+                    display: none;
+                }
+            }
+        }
+
+        main {
+            .background {
+                background-size: 100% 500px;
+
+                .locations {
+                    div {
+                        max-width: 17%;
+                    }
+                }
+            }
+
+            .cars {
+                flex-direction: column-reverse;
+                height: auto;
+
+                .offers {
+                    width: auto;
+
+                    div {
+                        height: auto;
+
+                        img {
+                            height: 200px;
+                            width: 260px;
+                        }
+
+                        &:nth-child(3) {
+                            padding: 0px 50px;
+
+                            img {
+                                height: 250px;
+                                width: 500px;
+                            }
+                        }
+
+                        p {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+
+                form {
+                    width: auto;
+                    margin-right: 15px;
+
+                    div:nth-child(5) {
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        footer {
+            height: 8vh;
+            flex-wrap: wrap;
+            padding: 10px 0px;
+
+            a {
+                margin: 0px 20px;
+
+            }
+
+            a:nth-child(5) {
+                margin-left: 0px;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: $small-screen-size) {
+        nav {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            &:hover {
+                height: auto;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 10px 0px;
+
+                    .nav-hide,
+                    :nth-child(4) {
+                        display: block;
+                    }
+                }
+            }
+
+            ul {
+                padding: 0px;
+                justify-content: center;
+            }
+
+            li.nav-more,
+            li:nth-child(4) {
+                display: none;
+            }
+        }
+
+        main {
+            .background {
+                background-size: cover;
+
+                .sellers {
+                    height: auto;
+                    padding-top: 0px;
+
+                    .locations {
+                        flex-direction: column-reverse;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+
+                        div {
+                            min-width: 80%;
+                        }
+                    }
+                }
+            }
+
+            .cars {
+                .offers {
+                    gap: 20px;
+                    margin: 10px 0px 0px 0px;
+
+                    div:nth-child(3) {
+                        padding: 0px;
+                        margin: 0px;
+                    }
+
+                    div {
+                        height: auto;
+                        min-width: 90%;
+                        margin: 0px;
+
+                        p{
+                            font-size: 20px;
+                        }
+
+                        img,
+                        #treca {
+                            width: 400px;
+                            height: 300px;
+                        }
+                    }
+                }
+
+                form{
+                    margin: 25px;
+
+                    .dream-car{
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        justify-content: center;
+
+                        img{
+                            height: 300px;
+                            width: 400px;
+                        }
+                        .description{
+                            width: auto;
+                            p,
+                            h4{
+        
+                                font-size: 20px;
+                                min-width: 400px;
+                                margin: 0px;
+                            }    
+                        }
+                    }
+                    .calculator{
+                        margin-top: 0px;
+                        gap: 5px;
+                        align-content: space-around;
+
+                        div{
+                            max-width: 55%;
+
+                            &.car-color{
+                                align-content: space-between;
+                                justify-content: space-between;
+                                min-height: 60px;
+                                label{
+                                    width: fit-content;
+                                }
+                            }
+                        }
+                        div:nth-child(5)
+                        {
+                            label{
+                                width: 100%;
+                            }
+                            span{
+                                width: fit-content;
+                            }
+                        }
+                        div:nth-child(7), 
+                        div:nth-child(8){
+                            height:fit-content;
+                        }
+                    }
+                }
+            }
+
+        }
+        footer{
+              flex-direction: column;  
+              height: auto; 
+              gap: 2px;
+              a:nth-child(5)
+              {
+                margin-top: 10px;
+              }
+        }
+
+    }
+}
+
+@mixin vezbamo-mixin {
+    padding: 0px 10px;
+    height: 25px;
+    border-radius: 15px;
+    border: 1px solid $secondary-color;
+    font-weight: bold;
+}
+
+@mixin flex-row-wrap- {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
